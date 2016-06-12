@@ -1,0 +1,33 @@
+[0m[[0minfo[0m] [0mConnecting to coursera. Obtaining challenge...[0m
+[0m[[0minfo[0m] [0mComputing challenge response...[0m
+[0m[[0minfo[0m] [0mSubmitting solution...[0m
+[0m[[31merror[0m] [0mException: We could not verify your username / password, please try again. (Note that your password is case-sensitive.)[0m
+[0m[[33mwarn[0m] [0mNOTE:[0m
+[0m[[33mwarn[0m] [0m   - Make sure that you have the freshly downloaded assignment from the[0m
+[0m[[33mwarn[0m] [0m     correct course.[0m
+[0m[[33mwarn[0m] [0m   - Make sure that your email is correct and that you have copied the[0m
+[0m[[33mwarn[0m] [0m     password correctly from the assignments page.[0m
+java.lang.RuntimeException: Submission failed
+	at scala.sys.package$.error(package.scala:27)
+	at ProgFunBuild$.failSubmit(ProgFunBuild.scala:208)
+	at ProgFunBuild$.submitSources(ProgFunBuild.scala:193)
+	at ProgFunBuild$$anonfun$submitSetting$1$$anonfun$apply$1$$anonfun$apply$2.apply(ProgFunBuild.scala:155)
+	at ProgFunBuild$$anonfun$submitSetting$1$$anonfun$apply$1$$anonfun$apply$2.apply(ProgFunBuild.scala:128)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:235)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[0m[[31merror[0m] [0m(assignment/*:[31msubmit[0m) Submission failed[0m
