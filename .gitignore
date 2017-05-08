@@ -11,6 +11,7 @@
 *.jar
 *.war
 *.ear
+*.dat
 
 # Gradle
 .gradle
@@ -22,6 +23,7 @@
 *.target
 build
 target
+**/target
 out
 classes
 reports
