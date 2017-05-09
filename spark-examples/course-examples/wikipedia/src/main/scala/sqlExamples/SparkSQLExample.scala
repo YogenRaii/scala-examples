@@ -28,7 +28,7 @@ object SparkSQLExample {
     //for $ use
     import spark.implicits._
 
-    val df = spark.read.json(PeopleData.filePath("json"))
+    val df = spark.read.json(MockData.filePath("people.json"))
     //display content of dataframe to stdout
     df.show()
 
@@ -57,14 +57,14 @@ object SparkSQLExample {
     val caseClassDS = Seq(Person("Yogen", 32)).toDS()
     caseClassDS.show()
 
-    val peopleDS = spark.read.json(PeopleData.filePath("json")).as[Person]
+    val peopleDS = spark.read.json(MockData.filePath("people.json")).as[Person]
     peopleDS.show()
   }
 
   def runInferSchemaExample(spark: SparkSession) = {
     import spark.implicits._
 
-    val peopleDF = spark.sparkContext.textFile(PeopleData.filePath("txt"))
+    val peopleDF = spark.sparkContext.textFile(MockData.filePath("people.txt"))
                         .map(_.split(","))
                         .map(attribs => Person(attribs(0), attribs(1).trim.toLong))
                         .toDF()
@@ -88,7 +88,7 @@ object SparkSQLExample {
       */
     import spark.implicits._
     //create RDD
-    val peopleRDD = spark.sparkContext.textFile(PeopleData.filePath("txt"))
+    val peopleRDD = spark.sparkContext.textFile(MockData.filePath("people.txt"))
 
     //convert RDD(people) to Rows
     val rowRDD = peopleRDD.map(_.split(",")).map(attribs => Row(attribs(0), attribs(1).trim))
