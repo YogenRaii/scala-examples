@@ -24,6 +24,7 @@
 build
 target
 **/target
+**/metastore_db
 out
 classes
 reports
