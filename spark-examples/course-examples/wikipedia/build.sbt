@@ -11,6 +11,7 @@ resolvers += Resolver.sonatypeRepo("releases")
 // grading libraries
 libraryDependencies += "junit" % "junit" % "4.10" % "test"
 libraryDependencies ++= assignmentsMap.value.values.flatMap(_.dependencies).toSeq
+libraryDependencies += "org.apache.spark" % "spark-mllib_2.10" % "2.1.1"
 
 // include the common dir
 commonSourcePackages += "common"
