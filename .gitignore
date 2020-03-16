@@ -44,3 +44,5 @@ bin
 # Cache
 ${cache.storage.path}
 cachedData
+
+**/.worksheet/*
