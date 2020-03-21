@@ -1,4 +1,4 @@
-package com.sundogsoftware.spark
+package com.eprogrammerz.examples.spark
 
 import org.apache.spark._
 import org.apache.spark.rdd._
@@ -54,7 +54,7 @@ object DegreesOfSeparation {
   
   /** Create "iteration 0" of our RDD of BFSNodes */
   def createStartingRdd(sc:SparkContext): RDD[BFSNode] = {
-    val inputFile = sc.textFile("../marvel-graph.txt")
+    val inputFile = sc.textFile("./data/marvel-graph.txt")
     return inputFile.map(convertToBFS)
   }
   
@@ -163,7 +163,7 @@ object DegreesOfSeparation {
   }
     
   /** Our main function where the action happens */
-  def main(args: Array[String]) {
+  def main(args: Array[String])  {
    
     // Set the log level to only print errors
     Logger.getLogger("org").setLevel(Level.ERROR)
@@ -176,8 +176,7 @@ object DegreesOfSeparation {
     hitCounter = Some(sc.longAccumulator("Hit Counter"))
     
     var iterationRdd = createStartingRdd(sc)
-    
-    var iteration:Int = 0
+
     for (iteration <- 1 to 10) {
       println("Running BFS Iteration# " + iteration)
    
