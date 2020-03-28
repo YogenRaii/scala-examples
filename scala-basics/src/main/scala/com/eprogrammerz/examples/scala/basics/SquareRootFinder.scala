@@ -1,20 +1,26 @@
 package com.eprogrammerz.examples.scala.basics
 
+/**
+  * Netwon's method to find Square root
+  */
 object SquareRootFinder {
-  def sqrtIter(guess: Double, x: Double): Double =
+  def sqrt(guess: Double, x: Double): Double =
     if (isGoodEnough(guess, x)) guess
-    else sqrtIter(improve(guess, x), x)
+    else sqrt(improve(guess, x), x)
 
-  def isGoodEnough(guess: Double, x: Double) = math.abs(square(guess) - x) < 0.001
+  // to make sure the diff falls within the epsilon, need to divide the diff with x
+  def isGoodEnough(guess: Double, x: Double): Boolean = math.abs(square(guess) - x) / x < 0.001
 
-  def improve(guess: Double, x: Double) = (guess + x / guess) / 2
+  def improve(guess: Double, x: Double): Double = (guess + x / guess) / 2
 
-  def square(x: Double) = x * x
+  def square(x: Double): Double = x * x
 
-  def sqrt(x: Double) = sqrtIter(1.0, x)
+  def sqrt(x: Double): Double = sqrt(1.0, x)
 
   def main(args: Array[String]): Unit = {
     println(sqrt(2))
     println(sqrt(4))
+    println(sqrt(1e-6))
+    println(sqrt(1e60))
   }
 }

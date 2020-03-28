@@ -103,6 +103,18 @@ def fib(n: Int): Unit = {
 
 fib(10)
 
+// functional style
+def fibFunc(n: Int): Int = {
+  def fibRec(f1: Int, f2: Int, c: Int): Int = {
+    if (c == n) f1 else fibRec(f2, f1 + f2, c + 1)
+  }
+  fibRec(1, 1, 0)
+}
+
+fibFunc(3)
+fibFunc(4)
+fibFunc(5)
+
 
 val ages = List(2, 52, 44, 23, 17, 14, 12, 82, 51, 64)
 
