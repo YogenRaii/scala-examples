@@ -26,28 +26,29 @@ object Lists {
   }
 }
 
-/**
-  * functions are objects
-  *
-  * (t: T) => y
-  *
-  * from
-  *
-  * class Function1 {
-  *   def apply(t: T): T
-  * }
-  */
-object List {
-  import Lists._
-  def apply[T](x1: T, x2: T): List[T] = new Cons[T](x1, new Cons[T](x2, new Nil[T]))
-
-  def apply[T](x1: T): List[T] = new Cons[T](x1, new Nil[T])
-
-  def apply[T](): List[T] = new Nil
-}
 
 object ListsTest {
   import Lists._
+
+  /**
+    * functions are objects
+    *
+    * (t: T) => y
+    *
+    * from
+    *
+    * class Function1 {
+    *   def apply(t: T): T
+    * }
+    */
+  object List {
+    import Lists._
+    def apply[T](x1: T, x2: T): List[T] = new Cons[T](x1, new Cons[T](x2, new Nil[T]))
+
+    def apply[T](x1: T): List[T] = new Cons[T](x1, new Nil[T])
+
+    def apply[T](): List[T] = new Nil
+  }
 
   // find nth element on given List
   @tailrec def nth(n: Int, xs: List[Int]): Int = {
