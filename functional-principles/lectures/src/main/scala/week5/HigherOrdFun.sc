@@ -1,10 +1,10 @@
-def scaleList(list: List[Double], factor: Double): List[Double] = list match {
+def scalaList(list: List[Double], factor: Double): List[Double] = list match {
   case Nil => Nil
-  case x :: list1 => x * factor :: scaleList(list1, factor)
+  case x :: list1 => x * factor :: scalaList(list1, factor)
 }
 
-scaleList(List(3, 2, 5), 4)
-scaleList(List(), 3)
+scalaList(List(3, 2, 5), 4)
+scalaList(List(), 3)
 
 def squareList(list: List[Double]): List[Double] =
   list map (x => x * x)
