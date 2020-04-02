@@ -1,4 +1,4 @@
-package com.eprogrammerz.examples.scala.basics
+package week1
 
 import scala.annotation.tailrec
 

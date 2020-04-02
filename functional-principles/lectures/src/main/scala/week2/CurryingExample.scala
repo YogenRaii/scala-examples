@@ -1,4 +1,4 @@
-package com.eprogrammerz.examples.scala.basics
+package week2
 
 object CurryingExample {
   def sum(f: Int => Int): (Int, Int) => Int = {

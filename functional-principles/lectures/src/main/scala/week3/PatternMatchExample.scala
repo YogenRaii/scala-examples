@@ -1,4 +1,4 @@
-package com.eprogrammerz.examples.scala.basics
+package week3
 
 object PatternMatchExample {
   

@@ -1,6 +1,4 @@
-package com.eprogrammerz.examples.scala.basics
-
-import com.eprogrammerz.examples.scala.basics.SquareRootBetter.sqrt
+package week1
 
 /**
   * Netwon's method to find Square root

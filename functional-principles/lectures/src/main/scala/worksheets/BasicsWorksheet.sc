@@ -1,4 +1,4 @@
-package com.eprogrammerz.examples.scala.basics.worksheets
+package worksheets
 
 object BasicsWorksheet {
   println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet

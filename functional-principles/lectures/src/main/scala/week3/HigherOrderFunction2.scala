@@ -1,6 +1,4 @@
-package com.eprogrammerz.examples.scala.basics
-
-import com.eprogrammerz.examples.scala.basics.HigherOrderFunction.{cubeSum, factSum, idSum}
+package week3
 
 import scala.annotation.tailrec
 
