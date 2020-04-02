@@ -1,4 +1,4 @@
-import scala.Boolean
+
 
 object mergesort{
   def msort[T](xs:List[T])(implicit ord:Ordering[T]):List[T] = {
@@ -18,7 +18,7 @@ object mergesort{
   }
   msort(List(1,3,2,5,4))
 
-  val fruits = List("banana","apple","pineapple","orange")
+  val fruits = List("banana", "apple", "pineapple", "orange")
 
   msort(fruits)
 }
