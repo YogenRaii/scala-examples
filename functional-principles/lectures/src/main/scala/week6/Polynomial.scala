@@ -1,8 +1,5 @@
 package week6
 
-import week6.PolynomialBetter.Poly
-import week6.PolynomialWOMap.Poly
-
 object Polynomial {
   class Poly(val terms: Map[Int, Double]) {
     def +(other: Poly) = new Poly(terms ++ (other.terms map adjust))
