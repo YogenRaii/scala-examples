@@ -1,5 +1,6 @@
+// possible divisors (2 to sqrt(n))
+def isPrime(n: Int): Boolean = (2 to math.sqrt(n).toInt) forall (n % _ != 0)
 
-def isPrime(n: Int): Boolean = (2 until n) forall (n % _ != 0)
 def findPrimePairs(n: Int): Seq[(Int, Int)] = {
   (1 until n) flatMap (i =>
     (1 until i) map (j => (i, j))) filter (pair => isPrime(pair._1 + pair._2))
@@ -12,7 +13,7 @@ val n = 7
   (1 until i - 1) map (j => (i, j))))
 
 (1 until n) flatMap (i =>
-  (1 until i) map (j => (i, j))) filter (pair => isPrime(pair._1 + pair._2))
+  (1 until i) map (j => (i, j))) filter { case (x, y) => isPrime(x + y)}
 
 for {
   i <- 1 until n
@@ -38,3 +39,8 @@ def scalarProduct1(xs: List[Double], ys: List[Double]): Double =
   ((xs zip ys) map (pair => pair._1 * pair._2)).sum
 
 scalarProduct1(List(2.3, 4.2), List(1, 2))
+
+def scalarProduct2(xs: List[Double], ys: List[Double]): Double =
+  (xs zip ys).map { case (x, y) => x * y }.sum
+
+scalarProduct2(List(2.3, 4.2), List(1, 2))
