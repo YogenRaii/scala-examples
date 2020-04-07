@@ -31,3 +31,15 @@ for {b <- books if b.title contains "Java"} yield b.title
     if a1 == a2
   } yield a1
 }.distinct
+
+
+val a: List[String] = Nil
+val b: List[Int] = Nil
+a == Nil
+a eq Nil
+
+a == b
+a eq b
+
+val e = '\"'
+val f = '\\'
