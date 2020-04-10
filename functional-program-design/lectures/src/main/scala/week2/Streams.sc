@@ -48,3 +48,4 @@ val g: String = "Check out the big brains on Brad!"
 g.indexOf('o', 7)
 
 31.toHexString
+
